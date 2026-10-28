@@ -1,0 +1,255 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>365 dias — Um pouquinho do que eu sinto.</title>
+
+    <meta name="theme-color" content="#f7f0eb">
+    <meta name="description"
+        content="365 dias, 365 páginas e palavras que merecem ser escritas.">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600&family=Italianno&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Elementos decorativos -->
+    <div class="decoration decoration-one" aria-hidden="true">❧</div>
+    <div class="decoration decoration-two" aria-hidden="true">❦</div>
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <a href="index.html" class="logo">
+            365 <span> 1.</span>
+        </a>
+
+        <div class="header-note">
+            um monte de sentimentos em forma de poesia.
+        </div>
+
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Apresentação -->
+        <section class="intro">
+
+            <div class="eyebrow">
+                a primeira das milhares.
+            </div>
+
+            <h1>
+                Antes que você<br>
+                <em>.me esqueça kkkkkkk :(</em>
+            </h1>
+
+            <p class="intro-description">
+                algumas coisas merecem ser escritas devagar.
+            </p>
+
+        </section>
+
+        <!-- Carta principal -->
+        <article class="letter">
+
+            <!-- Lado esquerdo: fotografia -->
+            <section class="photo-panel">
+
+                <div class="photo-frame">
+
+                    <span class="photo-number">01</span>
+
+                    <img
+                        src="images/macacos.png"
+                        alt="Dois macaquinhos juntos em uma fotografia divertida"
+                    >
+
+                    <div class="photo-caption">
+                        até mesmo os momentos mais complicados
+                        merecem um pouco de felicidade, né?
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Lado direito: carta -->
+            <section class="letter-content">
+
+                <!-- Informações da carta -->
+                <div class="letter-meta">
+
+                    <span>28 de outubro</span>
+
+                    <span>carta nº 001</span>
+
+                </div>
+
+                <!-- Título -->
+                <h2 class="letter-heading">
+                    Uma carta<br>
+                    <em>para ti.</em>
+                </h2>
+
+                <!-- Saudação -->
+                <p class="greeting">
+                    Destinado a uma belíssima princesa
+                </p>
+
+                <!-- Texto -->
+                <div class="letter-text">
+
+                    <p>
+                        Teus olhos possuem um brilho inexplicavel,
+                        Seu sorriso possui algo que vai além de toda a compreensão humana,
+                        Nem mesmo as mais belas palavras desse universo,
+                        são capazes de tentar te explicar.
+                    </p>
+
+                    <p>
+                        Cara, você com total certeza é uma deusa reencarnada,
+                        Além de absurdamente linda, é perfeita e encantadora.
+                        O brilho que de te exala, faz o universo se tornar míudo,
+                        e pra quando ti olho, percebo quão de você eu gosto.
+                    </p>
+
+                    <p>
+                        Odeio ter que acordar todas as manhãs e ficar pensando em ti,
+                        uma baita tortura que nem mesmo as piores dores superam kkkkkkkkk
+                        como que você pode ser tão linda assim fei? kkkkkkk
+                    </p>
+
+                    <p>
+                        Essa carta é apenas uma das 365 demonstrações do que eu sinto por você
+                        e bixo, sla, eu apenas gosto de você
+                        mas tá ai, um ano inteiro em poesias, especialmente dedicadas à você  
+                        <div class=""></div>
+                    </p>
+
+                </div>
+
+                <!-- Divisor -->
+                <div class="letter-divider">
+                    <span>♡</span>
+                </div>
+
+                <!-- Assinatura -->
+                <div class="signature">
+                    com carinho, 
+                </div>
+
+                <p class="signature-caption">
+                    alguém que decidiu escrever 
+                </p>
+
+                <!-- Rodapé da carta -->
+                <div class="letter-footer">
+
+                    <div class="day-indicator">
+                        <strong>01</strong> / 365
+                    </div>
+
+                    <button
+                        class="heart-button"
+                        id="heartButton"
+                        type="button"
+                        aria-label="Criar corações na tela"
+                    >
+                        <span class="heart">♡</span>
+                        <span>GUARDAR ESTE DIA</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </article>
+
+        <!-- Frase final -->
+        <section class="closing-quote">
+
+            <div class="ornament">✳</div>
+
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé geral -->
+    <footer>
+
+        <span>365 dias de palavras</span>
+
+        <span class="footer-center">
+            com todo o carinho desse mundo kkkkkkkkkkk
+        </span>
+
+        <span>página 001 / 365</span>
+
+    </footer>
+
+    <!-- JavaScript da interação -->
+    <script>
+        const heartButton = document.getElementById("heartButton");
+
+        heartButton.addEventListener("click", () => {
+
+            const symbols = ["♡", "♥", "✧", "❀", "❤"];
+            const total = 14;
+
+            for (let i = 0; i < total; i++) {
+
+                const heart = document.createElement("span");
+
+                heart.classList.add("floating-heart");
+
+                heart.textContent =
+                    symbols[Math.floor(Math.random() * symbols.length)];
+
+                heart.style.left = Math.random() * 100 + "vw";
+
+                heart.style.fontSize =
+                    (14 + Math.random() * 19) + "px";
+
+                heart.style.animationDelay =
+                    (Math.random() * 1.2) + "s";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 4500);
+
+            }
+
+            heartButton.innerHTML = `
+                <span class="heart">♥</span>
+                <span>DIA GUARDADO</span>
+            `;
+
+            heartButton.style.background = "#702e43";
+            heartButton.style.color = "#fffaf6";
+            heartButton.style.borderColor = "#702e43";
+
+        });
+    </script>
+
+</body>
+
+</html>
+```
